@@ -234,7 +234,10 @@ export default function CosmoIndiaLiteraryCouncil() {
             </p>
             
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="bg-linear-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-full hover:shadow-2xl transition-all duration-300 font-semibold flex items-center space-x-2 group">
+              <button onClick={() => {
+    window.location.href =
+      "mailto:cosmoindiaprakashan@gmail.com?subject=My%20First%20Piece%20of%20Art&body=Namaste,%0D%0A%0D%0AMy%20first%20piece%20of%20art%20is%20attached%20below.%0D%0A%0D%0ARegards,%0D%0A";
+  }} className="bg-linear-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-full hover:shadow-2xl transition-all duration-300 font-semibold flex items-center space-x-2 group">
                 <span>Begin Your Journey</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
