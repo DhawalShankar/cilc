@@ -436,9 +436,16 @@ const scrollToSection = (id: string) => {
             <p className="text-sm text-gray-600">— A Fellow Artist, Poetry Symposium 2024</p>
           </div>
 
-          <button className="bg-linear-to-r from-orange-600 to-red-600 text-white px-10 py-5 rounded-full text-xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105">
-            Begin Your Sacred Journey
-          </button>
+          <button
+  onClick={() => {
+    window.location.href =
+      "mailto:cosmoindiaprakashan@gmail.com?subject=My%20First%20Piece%20of%20Art&body=Namaste,%0D%0A%0D%0AMy%20first%20piece%20of%20art%20is%20attached%20below.%0D%0A%0D%0ARegards,%0D%0A";
+  }}
+  className="bg-linear-to-r from-orange-600 to-red-600 text-white px-10 py-5 rounded-full text-xl font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105"
+>
+  Begin Your Sacred Journey!
+</button>
+
         </div>
       </section>
 
