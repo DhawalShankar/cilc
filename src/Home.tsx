@@ -199,7 +199,7 @@ export default function CosmoIndiaLiteraryCouncil() {
               <a href="#philosophy" className="block text-gray-700 hover:text-orange-600 py-2">Philosophy</a>
               <a href="#events" className="block text-gray-700 hover:text-orange-600 py-2">Events</a>
               <a href="#gallery" className="block text-gray-700 hover:text-orange-600 py-2">Gallery</a>
-              <button className="w-full bg-linear-to-r from-orange-600 to-red-600 text-white px-6 py-2.5 rounded-full">
+              <button onClick={() => (window.location.hash = "/step")} className="w-full bg-linear-to-r from-orange-600 to-red-600 text-white px-6 py-2.5 rounded-full">
                 Step Onto Your Stage
               </button>
             </div>
