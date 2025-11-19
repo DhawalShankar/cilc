@@ -220,7 +220,7 @@ export default function CosmoIndiaLiteraryCouncil() {
           <div className="text-center mb-16">
             <div className="inline-block mb-6">
               <span className="bg-linear-to-r from-orange-100 to-purple-100 text-orange-800 px-4 py-2 rounded-full text-sm font-semibold">
-                Unity in Diversity • Where Stages Are Sacred Since 1975
+                Unity in Diversity • Where Stages Are Sacred 
               </span>
             </div>
             <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-linear-to-r from-orange-600 via-red-600 to-purple-600 bg-clip-text text-transparent leading-tight">
