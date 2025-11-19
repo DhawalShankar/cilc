@@ -728,7 +728,8 @@ export default function CosmoIndiaLiteraryCouncil() {
             </div>
 
             <div className="text-center">
-              <button className="bg-linear-to-r from-orange-600 to-red-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all transform hover:scale-105">
+              <button onClick={() => (window.location.hash = "/step")}
+               className="bg-linear-to-r from-orange-600 to-red-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all transform hover:scale-105">
                 Take the Pledge & Register
               </button>
               <p className="text-sm text-gray-500 mt-4">Join our Pledge Keepers</p>
