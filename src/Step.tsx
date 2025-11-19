@@ -3,8 +3,14 @@ import { Feather, Heart, Star, Sparkles, Music, BookOpen, Mic2, Drama, Globe, Ar
 
 export default function StepOntoYourStage() {
   const [selectedPath, setSelectedPath] = useState<string | null>(null);
-  const [, setFormStep] = useState<number>(1);
   const [pledgeAccepted, setPledgeAccepted] = useState<boolean>(false);
+  const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [category, setCategory] = useState(""); // auto-filled from selectedPath
+const scrollToSection = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+};
 
   const artistPaths = [
     {
@@ -56,6 +62,7 @@ export default function StepOntoYourStage() {
       description: 'Theatre, skits, monologues - embody stories that heal and inspire'
     }
   ];
+  const [open, setOpen] = useState(false);
 
   const benefits = [
     { icon: Award, text: 'Certificate of Honor - Always' },
@@ -65,6 +72,7 @@ export default function StepOntoYourStage() {
     { icon: BookOpen, text: 'Feature in Cosmo India Prakashan' },
     { icon: Users, text: 'Lifelong Artist Community' }
   ];
+  const [warning, setWarning] = useState("");
 
   const whyJoin = [
     {
@@ -163,7 +171,7 @@ export default function StepOntoYourStage() {
               return (
                 <button
                   key={path.id}
-                  onClick={() => setSelectedPath(path.id)}
+                  onClick={() =>{ setSelectedPath(path.id); setCategory(path.title);}}
                   className={`group relative bg-white rounded-3xl p-8 text-left transition-all duration-300 hover:shadow-2xl ${
                     isSelected ? 'ring-4 ring-orange-500 shadow-2xl scale-105' : 'hover:scale-105'
                   }`}
@@ -189,7 +197,7 @@ export default function StepOntoYourStage() {
           {selectedPath && (
             <div className="text-center animate-fade-in">
               <button 
-                onClick={() => setFormStep(2)}
+                onClick={() => scrollToSection('pledge-section')}
                 className="group bg-linear-to-r from-orange-600 to-red-600 text-white px-10 py-5 rounded-full text-lg font-bold hover:shadow-2xl transition-all duration-300 hover:scale-105 inline-flex items-center space-x-3"
               >
                 <span>Continue to Sacred Pledge</span>
@@ -213,12 +221,14 @@ export default function StepOntoYourStage() {
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
             {whyJoin.map((reason, idx) => (
-              <div
+              <div 
                 key={idx}
                 className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
-              >
-                <div className={`w-12 h-12 rounded-xl bg-linear-to-br from-${reason.color}-400 to-${reason.color}-600 flex items-center justify-center mb-4`}>
-                  <Sparkles className="w-6 h-6 text-white" />
+              > 
+              
+                <div className={`w-12 h-12 rounded-xl bg-linear-to-br from-${reason.color}-500 to-${reason.color}-600 flex items-center justify-center mb-4`}>
+    
+                  <Sparkles className="w-6 h-6 text-black" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-3">{reason.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{reason.description}</p>
@@ -251,7 +261,7 @@ export default function StepOntoYourStage() {
       </section>
 
       {/* Sacred Pledge Section */}
-      <section className="py-20 px-6 bg-linear-to-br from-purple-900 via-orange-900 to-red-900 text-white relative overflow-hidden">
+      <section id='pledge-section' className="py-20 px-6 bg-linear-to-br from-purple-900 via-orange-900 to-red-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-500 rounded-full filter blur-3xl"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
@@ -318,17 +328,79 @@ export default function StepOntoYourStage() {
           </div>
 
           <div className="text-center">
-            <button
-              disabled={!pledgeAccepted || !selectedPath}
-              className={`px-12 py-5 rounded-full text-xl font-bold transition-all duration-300 inline-flex items-center space-x-3 ${
-                pledgeAccepted && selectedPath
-                  ? 'bg-white text-purple-900 hover:shadow-2xl hover:scale-105 cursor-pointer'
-                  : 'bg-white/20 text-white/50 cursor-not-allowed'
-              }`}
-            >
-              <span>Complete Registration</span>
-              <ArrowRight className="w-6 h-6" />
-            </button>
+           <button
+                disabled={!pledgeAccepted || !selectedPath}
+                onClick={() => setOpen(true)}
+                className={`px-12 py-5 rounded-full text-xl font-bold transition-all duration-300 inline-flex items-center space-x-3 ${
+                    pledgeAccepted && selectedPath
+                    ? 'bg-white text-purple-900 hover:shadow-2xl hover:scale-105 cursor-pointer'
+                    : 'bg-white/20 text-white/50 cursor-not-allowed'
+                }`}
+                >
+                <span>Complete Registration</span>
+                <ArrowRight className="w-6 h-6" />
+                </button>
+                    {open && (
+  <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50">
+    <div className="bg-white p-8 text-black rounded-2xl shadow-2xl w-[90%] max-w-md space-y-6">
+
+      <h2 className="text-2xl font-bold text-purple-900">Artist Registration</h2>
+
+      {warning && (
+        <p className="text-red-600 text-sm font-semibold text-center">
+          {warning}
+        </p>
+      )}
+
+      <input
+        placeholder="Your Name"
+        className="w-full p-3 border rounded-lg"
+        value={name}
+        required
+        onChange={(e) => setName(e.target.value)}
+      />
+
+      <input
+        placeholder="Email"
+        className="w-full p-3 border rounded-lg"
+        value={email}
+        required
+        onChange={(e) => setEmail(e.target.value)}
+      />
+
+      <input
+        placeholder="Your Art Category"
+        className="w-full p-3 border rounded-lg"
+        value={category}
+        required
+        readOnly
+      />
+
+      <button
+        onClick={() => {
+          if (!name || !email || !category) {
+            setWarning("All fields are required.");
+            return;
+          }
+          setWarning("");
+          setOpen(false);
+          window.location.hash = "/certificate";
+        }}
+        className="w-full bg-purple-700 text-white py-3 rounded-lg font-bold hover:bg-purple-900 transition"
+      >
+        Submit & Continue
+      </button>
+
+      <button
+        onClick={() => setOpen(false)}
+        className="w-full text-purple-700 mt-2"
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+)}
+
             {(!pledgeAccepted || !selectedPath) && (
               <p className="text-sm text-yellow-300 mt-4">
                 {!selectedPath ? 'Please select your art form above' : 'Please accept the Sacred Stage Pledge to continue'}
@@ -339,7 +411,7 @@ export default function StepOntoYourStage() {
           <div className="text-center mt-8">
             <p className="text-sm text-white/80">
               <Globe className="w-4 h-4 inline mr-2" />
-              Join 10,000+ artists who've taken this pledge
+              Join the community of artists who've taken this pledge
             </p>
           </div>
         </div>

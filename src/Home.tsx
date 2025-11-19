@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { BookOpen, Feather, Award, ArrowRight, Menu, X, Search, Music, Drama, Mic2, Sparkles, Globe, Heart, Star, Camera, Video, CheckCircle } from 'lucide-react';
-import { useNavigate } from "react-router-dom";
+
+
 export default function CosmoIndiaLiteraryCouncil() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState('all');
   const [lightIntensity, setLightIntensity] = useState(0);
-  const navigate = useNavigate();
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -175,9 +176,13 @@ export default function CosmoIndiaLiteraryCouncil() {
               <a href="#philosophy" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Philosophy</a>
               <a href="#events" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Events</a>
               <a href="#gallery" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Gallery</a>
-              <button onClick={() => navigate("/step")} className="bg-linear-to-r from-orange-600 to-red-600 text-white px-6 py-2.5 rounded-full hover:shadow-xl transition-all duration-300 font-medium">
-                Step Onto Your Stage
-              </button>
+              <button
+                    onClick={() => (window.location.hash = "/step")}
+                    className="bg-linear-to-r from-orange-600 to-red-600 text-white px-6 py-2.5 rounded-full hover:shadow-xl transition-all duration-300 font-medium"
+                    >
+                    Step Onto Your Stage
+                    </button>
+
             </div>
 
             <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -726,7 +731,7 @@ export default function CosmoIndiaLiteraryCouncil() {
               <button className="bg-linear-to-r from-orange-600 to-red-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all transform hover:scale-105">
                 Take the Pledge & Register
               </button>
-              <p className="text-sm text-gray-500 mt-4">Join 10,000+ Pledge Keepers</p>
+              <p className="text-sm text-gray-500 mt-4">Join our Pledge Keepers</p>
             </div>
           </div>
         </div>
