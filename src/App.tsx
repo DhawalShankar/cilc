@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { BookOpen, Feather, Award, Calendar, Users, ArrowRight, Menu, X, Search, ChevronRight, Music, Drama, Mic2, Sparkles, Globe, Heart, Star, Camera, Video, CheckCircle } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { BookOpen, Feather, Award, Users, ArrowRight, Menu, X, Search, Music, Drama, Mic2, Sparkles, Globe, Heart, Star, Camera, Video, CheckCircle } from 'lucide-react';
 // Install: npm install react-helmet
 
 
