@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { BookOpen, Feather, Award, Users, ArrowRight, Menu, X, Search, Music, Drama, Mic2, Sparkles, Globe, Heart, Star, Camera, Video, CheckCircle } from 'lucide-react';
+import { BookOpen, Feather, Award, ArrowRight, Menu, X, Search, Music, Drama, Mic2, Sparkles, Globe, Heart, Star, Camera, Video, CheckCircle } from 'lucide-react';
 // Install: npm install react-helmet
 
 
@@ -106,7 +106,7 @@ export default function CosmoIndiaLiteraryCouncil() {
       title: "Sacred Stage Open Mic",
       subtitle: "Every Voice Matters",
       category: "openmic",
-      description: "Safe, institutional open mic nights for poetry, music, stand-up, and storytelling. Where every performer is honored.",
+      description: "Safe, institutional open mic evenings for poetry, music, stand-up, and storytelling. Where every performer is honored.",
       frequency: "Monthly",
       participants: "100+",
       image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80",
@@ -125,26 +125,26 @@ export default function CosmoIndiaLiteraryCouncil() {
     { id: 'openmic', label: 'Open Mic' }
   ];
 
-  const testimonials = [
-    {
-      quote: "I didn't win, but I found my voice. The sacred stage gave me confidence I never knew I had.",
-      name: "Priya Sharma",
-      event: "Poetry Symposium 2024",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
-    },
-    {
-      quote: "The stage taught me more than any classroom. I left transformed, not just recognized.",
-      name: "Arjun Mehta",
-      event: "MUN Conference 2024",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
-    },
-    {
-      quote: "I touched the stage with fear, left it with courage. CILC honors every performer equally.",
-      name: "Ananya Desai",
-      event: "Classical Dance Showcase 2024",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80"
-    }
-  ];
+  // const testimonials = [
+  //   {
+  //     quote: "I didn't win, but I found my voice. The sacred stage gave me confidence I never knew I had.",
+  //     name: "Priya Sharma",
+  //     event: "Poetry Symposium 2024",
+  //     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80"
+  //   },
+  //   {
+  //     quote: "The stage taught me more than any classroom. I left transformed, not just recognized.",
+  //     name: "Arjun Mehta",
+  //     event: "MUN Conference 2024",
+  //     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80"
+  //   },
+  //   {
+  //     quote: "I touched the stage with fear, left it with courage. CILC honors every performer equally.",
+  //     name: "Ananya Desai",
+  //     event: "Classical Dance Showcase 2024",
+  //     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80"
+  //   }
+  // ];
 
   const filteredEvents = activeTab === 'all' 
     ? events 
@@ -153,7 +153,7 @@ export default function CosmoIndiaLiteraryCouncil() {
   return (
     // Add at the top of your component's return statement:
 
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50">
+    <div className="min-h-screen bg-linear-to-br from-amber-50 via-white to-orange-50">
       {/* Navigation */}
       
       <nav className={`fixed w-full z-50 transition-all duration-300 ${
@@ -162,11 +162,11 @@ export default function CosmoIndiaLiteraryCouncil() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center space-x-3">
-              <div className="bg-gradient-to-br from-orange-500 to-red-600 p-2.5 rounded-xl">
+              <div className="bg-linear-to-br from-orange-500 to-red-600 p-2.5 rounded-xl">
                 <Feather className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h1 className="text-lg md:text-xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+                <h1 className="text-lg md:text-xl font-bold bg-linear-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
                   Cosmo India Literary Council
                 </h1>
                 <p className="text-xs text-gray-600">कॉस्मो इंडिया साहित्य परिषद | CILC</p>
@@ -178,7 +178,7 @@ export default function CosmoIndiaLiteraryCouncil() {
               <a href="#philosophy" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Philosophy</a>
               <a href="#events" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Events</a>
               <a href="#gallery" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">Gallery</a>
-              <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-2.5 rounded-full hover:shadow-xl transition-all duration-300 font-medium">
+              <button className="bg-linear-to-r from-orange-600 to-red-600 text-white px-6 py-2.5 rounded-full hover:shadow-xl transition-all duration-300 font-medium">
                 Step Onto Your Stage
               </button>
             </div>
@@ -197,7 +197,7 @@ export default function CosmoIndiaLiteraryCouncil() {
               <a href="#philosophy" className="block text-gray-700 hover:text-orange-600 py-2">Philosophy</a>
               <a href="#events" className="block text-gray-700 hover:text-orange-600 py-2">Events</a>
               <a href="#gallery" className="block text-gray-700 hover:text-orange-600 py-2">Gallery</a>
-              <button className="w-full bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-2.5 rounded-full">
+              <button className="w-full bg-linear-to-r from-orange-600 to-red-600 text-white px-6 py-2.5 rounded-full">
                 Step Onto Your Stage
               </button>
             </div>
@@ -219,11 +219,11 @@ export default function CosmoIndiaLiteraryCouncil() {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <div className="inline-block mb-6">
-              <span className="bg-gradient-to-r from-orange-100 to-purple-100 text-orange-800 px-4 py-2 rounded-full text-sm font-semibold">
+              <span className="bg-linear-to-r from-orange-100 to-purple-100 text-orange-800 px-4 py-2 rounded-full text-sm font-semibold">
                 Unity in Diversity • Where Stages Are Sacred Since 1975
               </span>
             </div>
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-red-600 to-purple-600 bg-clip-text text-transparent leading-tight">
+            <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-linear-to-r from-orange-600 via-red-600 to-purple-600 bg-clip-text text-transparent leading-tight">
               Every Stage is a Temple
             </h2>
             <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -232,7 +232,7 @@ export default function CosmoIndiaLiteraryCouncil() {
             </p>
             
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-full hover:shadow-2xl transition-all duration-300 font-semibold flex items-center space-x-2 group">
+              <button className="bg-linear-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-full hover:shadow-2xl transition-all duration-300 font-semibold flex items-center space-x-2 group">
                 <span>Begin Your Journey</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -243,7 +243,7 @@ export default function CosmoIndiaLiteraryCouncil() {
           </div>
 
           {/* Live Counters */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
+          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
             {[
               { icon: Star, label: 'Stages Illuminated', value: '250+' },
               { icon: Users, label: 'Dreams Honored', value: '10,000+' },
@@ -251,19 +251,19 @@ export default function CosmoIndiaLiteraryCouncil() {
               { icon: Sparkles, label: 'Transformations', value: '8,500+' }
             ].map((stat, idx) => (
               <div key={idx} className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="bg-gradient-to-br from-orange-500 via-red-600 to-purple-600 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                <div className="bg-linear-to-br from-orange-500 via-red-600 to-purple-600 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
                   <stat.icon className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-gray-800 mb-1">{stat.value}</div>
                 <div className="text-gray-600 text-sm">{stat.label}</div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* Sacred Stage Philosophy Section */}
-      <section id="philosophy" className="py-20 px-4 bg-gradient-to-br from-purple-50 via-orange-50 to-white relative overflow-hidden">
+      <section id="philosophy" className="py-20 px-4 bg-linear-to-br from-purple-50 via-orange-50 to-white relative overflow-hidden">
         {/* Decorative Elements */}
         <div className="absolute top-0 left-0 w-64 h-64 bg-orange-200 rounded-full filter blur-3xl opacity-20"></div>
         <div className="absolute bottom-0 right-0 w-64 h-64 bg-purple-200 rounded-full filter blur-3xl opacity-20"></div>
@@ -273,10 +273,10 @@ export default function CosmoIndiaLiteraryCouncil() {
             <div className="inline-block mb-6">
               <Star className="w-16 h-16 mx-auto text-orange-600 animate-pulse" />
             </div>
-            <h3 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-600 via-purple-600 to-red-600 bg-clip-text text-transparent">
+            <h3 className="text-4xl md:text-6xl font-bold mb-6 bg-linear-to-r from-orange-600 via-purple-600 to-red-600 bg-clip-text text-transparent">
               The Sacred Stage Philosophy
             </h3>
-            <div className="w-24 h-1 bg-gradient-to-r from-orange-600 to-purple-600 mx-auto mb-8"></div>
+            <div className="w-24 h-1 bg-linear-to-r from-orange-600 to-purple-600 mx-auto mb-8"></div>
           </div>
 
           {/* Founder's Story */}
@@ -324,7 +324,7 @@ export default function CosmoIndiaLiteraryCouncil() {
 
           {/* What Sacred Stage Means */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-gradient-to-br from-orange-50 to-white rounded-2xl p-8 shadow-lg border-2 border-orange-200">
+            <div className="bg-linear-to-br from-orange-50 to-white rounded-2xl p-8 shadow-lg border-2 border-orange-200">
               <div className="bg-orange-600 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
                 <Heart className="w-8 h-8 text-white" />
               </div>
@@ -334,7 +334,7 @@ export default function CosmoIndiaLiteraryCouncil() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 shadow-lg border-2 border-purple-200">
+            <div className="bg-linear-to-br from-purple-50 to-white rounded-2xl p-8 shadow-lg border-2 border-purple-200">
               <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
                 <Sparkles className="w-8 h-8 text-white" />
               </div>
@@ -344,7 +344,7 @@ export default function CosmoIndiaLiteraryCouncil() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-red-50 to-white rounded-2xl p-8 shadow-lg border-2 border-red-200">
+            <div className="bg-linear-to-br from-red-50 to-white rounded-2xl p-8 shadow-lg border-2 border-red-200">
               <div className="bg-red-600 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
                 <Star className="w-8 h-8 text-white" />
               </div>
@@ -356,16 +356,16 @@ export default function CosmoIndiaLiteraryCouncil() {
           </div>
 
           {/* Before You Step On Stage */}
-          <div className="bg-gradient-to-r from-orange-600 via-red-600 to-purple-600 rounded-3xl p-1 mb-12">
+          <div className="bg-linear-to-r from-orange-600 via-red-600 to-purple-600 rounded-3xl p-1 mb-12">
             <div className="bg-white rounded-3xl p-8 md:p-12">
-              <h4 className="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-orange-600 to-purple-600 bg-clip-text text-transparent">
+              <h4 className="text-3xl font-bold text-center mb-8 bg-linear-to-r from-orange-600 to-purple-600 bg-clip-text text-transparent">
                 Before You Step On Stage
               </h4>
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
-                    <div className="bg-orange-100 rounded-full p-2 flex-shrink-0">
+                    <div className="bg-orange-100 rounded-full p-2 shrink-0">
                       <CheckCircle className="w-6 h-6 text-orange-600" />
                     </div>
                     <div>
@@ -375,7 +375,7 @@ export default function CosmoIndiaLiteraryCouncil() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="bg-purple-100 rounded-full p-2 flex-shrink-0">
+                    <div className="bg-purple-100 rounded-full p-2 shrink-0">
                       <CheckCircle className="w-6 h-6 text-purple-600" />
                     </div>
                     <div>
@@ -387,7 +387,7 @@ export default function CosmoIndiaLiteraryCouncil() {
 
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
-                    <div className="bg-red-100 rounded-full p-2 flex-shrink-0">
+                    <div className="bg-red-100 rounded-full p-2 shrink-0">
                       <CheckCircle className="w-6 h-6 text-red-600" />
                     </div>
                     <div>
@@ -397,7 +397,7 @@ export default function CosmoIndiaLiteraryCouncil() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="bg-orange-100 rounded-full p-2 flex-shrink-0">
+                    <div className="bg-orange-100 rounded-full p-2 shrink-0">
                       <CheckCircle className="w-6 h-6 text-orange-600" />
                     </div>
                     <div>
@@ -427,7 +427,7 @@ export default function CosmoIndiaLiteraryCouncil() {
                 { icon: Heart, title: 'The Experience', desc: 'Transformation, growth, and community' }
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start space-x-4 p-4 rounded-xl hover:bg-orange-50 transition-colors">
-                  <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-lg p-3 flex-shrink-0">
+                  <div className="bg-linear-to-br from-orange-500 to-red-600 rounded-lg p-3 shrink-0">
                     <item.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -459,7 +459,7 @@ export default function CosmoIndiaLiteraryCouncil() {
                 onClick={() => setActiveTab(cat.id)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   activeTab === cat.id
-                    ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white shadow-lg'
+                    ? 'bg-linear-to-r from-orange-600 to-red-600 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                 }`}
               >
@@ -484,7 +484,7 @@ export default function CosmoIndiaLiteraryCouncil() {
                   <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full">
                     <span className="text-sm font-semibold text-orange-600">{event.frequency}</span>
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <event.icon className="w-10 h-10 text-white" />
                   </div>
@@ -505,7 +505,7 @@ export default function CosmoIndiaLiteraryCouncil() {
                     {event.description}
                   </p>
                   
-                  <button className="w-full bg-gradient-to-r from-orange-600 to-red-600 text-white py-3 rounded-full font-semibold hover:shadow-lg transition-all">
+                  <button className="w-full bg-linear-to-r from-orange-600 to-red-600 text-white py-3 rounded-full font-semibold hover:shadow-lg transition-all">
                     Honor This Stage
                   </button>
                 </div>
@@ -516,7 +516,7 @@ export default function CosmoIndiaLiteraryCouncil() {
       </section>
 
       {/* Testimonials - Reframed */}
-      <section className="py-20 px-4 bg-gradient-to-br from-orange-50 to-purple-50">
+      {/* <section className="py-20 px-4 bg-linear-to-br from-orange-50 to-purple-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
@@ -542,10 +542,10 @@ export default function CosmoIndiaLiteraryCouncil() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Sacred Stage Honor Roll */}
-      <section className="py-20 px-4 bg-gradient-to-br from-purple-900 via-orange-900 to-red-900 text-white relative overflow-hidden">
+      <section className="py-20 px-4 bg-linear-to-br from-purple-900 via-orange-900 to-red-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-500 rounded-full filter blur-3xl"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl"></div>
@@ -572,7 +572,7 @@ export default function CosmoIndiaLiteraryCouncil() {
                 className="bg-white/20 border border-white/30 rounded-full px-6 py-3 text-white placeholder-white/60 w-full max-w-md focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
-            <p className="text-sm text-orange-200">10,000+ participants honored • 250+ events • Since 1975</p>
+            {/* <p className="text-sm text-orange-200">10,000+ participants honored • 250+ events • Since 1975</p> */}
           </div>
 
           <button className="bg-white text-purple-900 px-8 py-4 rounded-full font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
@@ -608,7 +608,7 @@ export default function CosmoIndiaLiteraryCouncil() {
                   alt={`Gallery ${idx + 1}`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                   <span className="text-white text-sm font-medium">Sacred Moment #{idx + 1}</span>
                 </div>
               </div>
@@ -616,7 +616,7 @@ export default function CosmoIndiaLiteraryCouncil() {
           </div>
 
           <div className="text-center">
-            <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all">
+            <button className="bg-linear-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all">
               Explore Full Gallery
             </button>
           </div>
@@ -624,7 +624,7 @@ export default function CosmoIndiaLiteraryCouncil() {
       </section>
 
       {/* For Institutions Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-orange-50">
+      <section className="py-20 px-4 bg-linear-to-br from-gray-50 to-orange-50">
         <div className="max-w-6xl mx-auto">
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl">
             <div className="text-center mb-12">
@@ -645,7 +645,7 @@ export default function CosmoIndiaLiteraryCouncil() {
                   { title: 'Cultural Festivals', desc: 'Multi-day celebrations of arts and expression' }
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start space-x-4">
-                    <div className="bg-orange-100 rounded-full p-2 flex-shrink-0">
+                    <div className="bg-orange-100 rounded-full p-2 shrink-0">
                       <CheckCircle className="w-6 h-6 text-orange-600" />
                     </div>
                     <div>
@@ -659,13 +659,13 @@ export default function CosmoIndiaLiteraryCouncil() {
               <div className="space-y-6">
                 <h4 className="text-2xl font-bold text-gray-800 mb-4">Why Partner With Us</h4>
                 {[
-                  { title: '50+ Years Legacy in Literature', desc: 'Trusted by Authors since 1970s' },
+                  { title: '50+ Years Legacy in Literature', desc: 'Trusted by Authors since 1975' },
                   { title: 'Holistic Development', desc: 'Focus on growth, not just competition' },
                   { title: 'Professional Standards', desc: 'High-quality production and documentation' },
                   { title: 'Inclusive Philosophy', desc: 'Every student matters, every voice counts' }
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start space-x-4">
-                    <div className="bg-purple-100 rounded-full p-2 flex-shrink-0">
+                    <div className="bg-purple-100 rounded-full p-2 shrink-0">
                       <Star className="w-6 h-6 text-purple-600" />
                     </div>
                     <div>
@@ -678,7 +678,7 @@ export default function CosmoIndiaLiteraryCouncil() {
             </div>
 
             <div className="text-center">
-              <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all inline-flex items-center space-x-2">
+              <button className="bg-linear-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all inline-flex items-center space-x-2">
                 <span>Partner With CILC</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
@@ -688,7 +688,7 @@ export default function CosmoIndiaLiteraryCouncil() {
       </section>
 
       {/* Sacred Stage Pledge Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-orange-100 via-purple-100 to-red-100 relative overflow-hidden">
+      <section className="py-20 px-4 bg-linear-to-br from-orange-100 via-purple-100 to-red-100 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-10 left-10 w-72 h-72 bg-orange-400 rounded-full filter blur-3xl"></div>
           <div className="absolute bottom-10 right-10 w-72 h-72 bg-purple-400 rounded-full filter blur-3xl"></div>
@@ -698,35 +698,35 @@ export default function CosmoIndiaLiteraryCouncil() {
           <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl border-2 border-orange-200">
             <div className="text-center mb-8">
               <Heart className="w-16 h-16 mx-auto mb-6 text-red-600 animate-pulse" />
-              <h3 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-orange-600 to-purple-600 bg-clip-text text-transparent">
+              <h3 className="text-4xl md:text-5xl font-bold mb-4 bg-linear-to-r from-orange-600 to-purple-600 bg-clip-text text-transparent">
                 The Sacred Stage Pledge
               </h3>
               <p className="text-gray-600 text-lg">When you register, join thousands who've taken this sacred commitment</p>
             </div>
 
-            <div className="bg-gradient-to-br from-orange-50 to-purple-50 rounded-2xl p-8 mb-8">
+            <div className="bg-linear-to-br from-orange-50 to-purple-50 rounded-2xl p-8 mb-8">
               <div className="space-y-4 text-lg text-gray-700 leading-relaxed">
                 <p className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-orange-600 shrink-0 mt-1" />
                   <span>I pledge to <strong>honor this stage</strong> as a sacred space of expression</span>
                 </p>
                 <p className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-purple-600 shrink-0 mt-1" />
                   <span>I pledge to <strong>respect fellow performers</strong> and celebrate their courage</span>
                 </p>
                 <p className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-red-600 shrink-0 mt-1" />
                   <span>I pledge to <strong>learn, grow, and inspire</strong> through my performance</span>
                 </p>
                 <p className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-orange-600 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-orange-600 shrink-0 mt-1" />
                   <span>I pledge to <strong>honor the journey</strong> regardless of the outcome</span>
                 </p>
               </div>
             </div>
 
             <div className="text-center">
-              <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all transform hover:scale-105">
+              <button className="bg-linear-to-r from-orange-600 to-red-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all transform hover:scale-105">
                 Take the Pledge & Register
               </button>
               <p className="text-sm text-gray-500 mt-4">Join 10,000+ Pledge Keepers</p>
@@ -736,17 +736,17 @@ export default function CosmoIndiaLiteraryCouncil() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-br from-gray-900 via-purple-900 to-orange-900 text-white py-16 px-4">
+      <footer className="bg-linear-to-br from-gray-900 via-purple-900 to-orange-900 text-white py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="bg-gradient-to-br from-orange-500 to-red-600 p-2 rounded-xl">
+                <div className="bg-linear-to-br from-orange-500 to-red-600 p-2 rounded-xl">
                   <Feather className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h4 className="font-bold text-lg">CILC</h4>
-                  <p className="text-xs text-orange-300">Since 1975</p>
+                  <p className="text-xs text-orange-300">Ensuring everyone tastes the elixir of life!</p>
                 </div>
               </div>
               <p className="text-sm text-gray-300 leading-relaxed">
@@ -769,7 +769,7 @@ export default function CosmoIndiaLiteraryCouncil() {
               <ul className="space-y-2 text-sm">
                 <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">MUN & Debates</a></li>
                 <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">Classical Arts</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">Open Mic Nights</a></li>
+                <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">Open Mic Evenings</a></li>
                 <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">Honor Roll</a></li>
               </ul>
             </div>
@@ -793,7 +793,7 @@ export default function CosmoIndiaLiteraryCouncil() {
               Every stage is a temple. Every performance is a prayer. Every voice is sacred.
             </p>
             <p className="text-xs text-gray-500">
-              © 2024 Cosmo India Literary Council. Honoring expression since 1975.
+              © 2025 Cosmo India Literary Council. Honoring expressions of Life.
             </p>
           </div>
         </div>
