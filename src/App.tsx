@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BookOpen, Feather, Award, Calendar, Users, ArrowRight, Menu, X, Search, ChevronRight, Music, Drama, Mic2, Sparkles, Globe, Heart, Star, Camera, Video, CheckCircle } from 'lucide-react';
 // Install: npm install react-helmet
-import { Helmet } from 'react-helmet';
+
 
 
 export default function CosmoIndiaLiteraryCouncil() {
@@ -155,10 +155,7 @@ export default function CosmoIndiaLiteraryCouncil() {
 
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-orange-50">
       {/* Navigation */}
-      <Helmet>
-  <title>CILC - Cosmo India Literary Council | Every Stage is a Temple</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕉️</text></svg>" />
-</Helmet>
+      
       <nav className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}>
