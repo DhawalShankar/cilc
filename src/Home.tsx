@@ -680,7 +680,11 @@ export default function CosmoIndiaLiteraryCouncil() {
             </div>
 
             <div className="text-center">
-              <button className="bg-linear-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all inline-flex items-center space-x-2">
+              <button onClick={() => {
+    window.location.href =
+      "mailto:cosmoindiaprakashan@gmail.com?subject=My%20First%20Piece%20of%20Art&body=Namaste,%0D%0A%0D%0AMy%20first%20piece%20of%20art%20is%20attached%20below.%0D%0A%0D%0ARegards,%0D%0A";
+  }}
+              className="bg-linear-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all inline-flex items-center space-x-2">
                 <span>Partner With CILC</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
