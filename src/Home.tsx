@@ -7,6 +7,10 @@ export default function CosmoIndiaLiteraryCouncil() {
   const [scrolled, setScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState('all');
   const [lightIntensity, setLightIntensity] = useState(0);
+  const scrollToSection = (id: string) => {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+};
 
   useEffect(() => {
     const handleScroll = () => {
@@ -241,7 +245,8 @@ export default function CosmoIndiaLiteraryCouncil() {
                 <span>Begin Your Journey</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="border-2 border-orange-600 text-orange-600 px-8 py-4 rounded-full hover:bg-orange-50 transition-all duration-300 font-semibold">
+              <button  onClick={() => scrollToSection('philosophy')}
+              className="border-2 border-orange-600 text-orange-600 px-8 py-4 rounded-full hover:bg-orange-50 transition-all duration-300 font-semibold">
                 Discover the Philosophy
               </button>
             </div>
